@@ -1,0 +1,487 @@
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Forum';
+    font-weight: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 40px 4px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.7s 0.5s ease-out forwards;
+}
+
+.flex-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 2vh 0 2vh 0;
+    position: relative;
+}
+
+.etoiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6%;
+    position: absolute;
+    left: 50%;
+}
+
+.etoile {
+    height: 2.5vh;
+}
+
+.separateur1 {
+    height: 1px;
+    width: 100%;
+    background-color: #c1d6e3;
+}
+
+.logo {
+    height: 25vh;
+    margin: 6vh 0 5vh 0;
+}
+
+.separateur2 {
+    height: 1px;
+    width: 70%;
+    background-color: #c1d6e3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 3vh 0 3vh 0;
+}
+
+header a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 0.78rem;
+    letter-spacing: 0.18rem;
+    display: flex;
+    transition: all 0.2s ease;
+}
+
+.actif {
+    font-weight: bold;
+}
+
+header a:not(.actif):hover,
+.actif {
+    color: #0073ad;
+    transition: all 0.2s ease;
+}
+
+.separateur-vertical {
+    width: 1px;
+    height: 2vh;
+    background-color: rgb(112, 144, 192);
+}
+
+.iconinfo,
+.cal {
+    height: 2.5vh;
+}
+
+.cal {
+    margin-right: 0.8em;
+}
+
+.resalien {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger,
+.navresp {
+    display: none;
+}
+
+/* ------Footer------ */
+
+footer {
+    height: 20vh;
+    background-color: #003753;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+}
+
+
+/* ------Entete------ */
+
+
+.entete {
+    width: 100%;
+    background-image: url("../img/entete1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition 1s 0.8s ease-out forwards;
+}
+
+.entete h1 {
+    font-size: 5.5rem;
+    color: white;
+}
+
+
+
+/* ------catalogue------ */
+
+.flex-catalogue {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    gap: 5em;
+    opacity: 0;
+    transform: none;
+    transform: translateY(30px);
+    animation: apparition 1s 0.2s ease-out forwards;
+}
+
+
+/* ------barre de tri------ */
+
+.contient-tri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfb;
+    border: #efefef 3px solid;
+    position: sticky;
+    top: 5vh;
+    height: 90vh;
+    width: 20em;
+}
+
+.tri {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+    letter-spacing: 0.12em;
+}
+
+.tri select {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    width: 100%;
+    height: 4.8vh;
+    border: 0;
+    border-bottom: 1px solid #e7d0a2;
+    padding-left: 0.6em;
+    size: 0.8rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.tri button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+    height: 3em;
+    padding: 0.5em;
+    background-color: rgb(112, 144, 192);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 0;
+}
+
+.tri button:hover {
+    background-color: #e7d0a2;
+    transition: all 0.3s;
+}
+
+.critere-tri label,
+.equip {
+    font-family: 'Forum';
+    font-size: 1.375rem;
+    margin-bottom: 0.5em;
+}
+
+.flex-checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+    height: 12vh;
+}
+
+.check-pointer {
+    cursor: pointer;
+}
+
+.critere-tri,
+.critere-equip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* ------produits flex------ */
+
+.ligne2chb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5em;
+    width: 60%;
+    margin: 5em 0 5em 0;
+}
+
+.chb-container {
+    width: 45%;
+    height: fit-content;
+}
+
+.chb-img-cont {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.chb-img-cont img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.chb-img-cont img:hover {
+    transform: scale(1.01);
+    transition: all 0.3s;
+}
+
+.flex-chb-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.flex-case {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+
+.flex-case h2 {
+    font-size: 2rem;
+}
+
+.chb-container span {
+    font-weight: 600;
+    color: rgb(112, 144, 192);
+}
+
+/* ------Bouton réservation------ */
+
+.resa-bouton {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    background-color: #e7d0a2;
+    letter-spacing: 0.05em;
+    margin-top: 0.8em;
+    height: 2em;
+    width: 7.5em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    transition: all 0.2s;
+}
+
+.resa-bouton:hover {
+    background-color: rgb(112, 144, 192);
+    color: white;
+    transition: all 0.2s;
+}
+
+
+/* ------Fail message------ */
+.fail {
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: auto;
+}
+
+/* ------Footer------ */
+
+footer {
+    height: 20vh;
+    background-color: #003753;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+}
+
+/* -------apparition------- */
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 1328px) {
+
+    .nav,
+    .resalien,
+    .separateur2 {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        min-height: 17vh;
+    }
+
+    .menu {
+        cursor: pointer;
+        display: block;
+        width: 3%;
+    }
+
+    .ligne2chb {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .flex-catalogue {
+        justify-content: center;
+        gap: 0;
+    }
+
+    .chb-container {
+        width: 60%;
+
+    }
+
+    .nav-item {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.18rem;
+        transition: all 0.2s ease;
+        margin-left: 10%;
+    }
+
+    .nav-item:not(.actif):hover,
+    .actif {
+        color: #0073ad;
+        transition: all 0.2s ease;
+        font-weight: 600;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .navresp {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        position: sticky;
+        width: 100vw;
+        height: 100%;
+        position: fixed;
+        transform: translateX(-200%);
+        transition: transform 0.7s ease-out;
+        z-index: 99;
+        background: white;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    .show-nav {
+        transform: translateX(0);
+    }
+
+
+}
+
+@media screen and (min-width: 1280px) {
+    .nav {
+        display: flex;
+    }
+}

@@ -1,0 +1,513 @@
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3 {
+    font-family: 'Forum';
+    font-weight: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 40px 4px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.7s 0.5s ease-out forwards;
+}
+
+.flex-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 2vh 0 2vh 0;
+    position: relative;
+}
+
+.etoiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6%;
+    position: absolute;
+    left: 50%;
+}
+
+.etoile {
+    height: 2.5vh;
+}
+
+.separateur1 {
+    height: 1px;
+    width: 100%;
+    background-color: #c1d6e3;
+}
+
+.logo {
+    height: 25vh;
+    margin: 6vh 0 5vh 0;
+}
+
+.separateur2 {
+    height: 1px;
+    width: 70%;
+    background-color: #c1d6e3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 3vh 0 3vh 0;
+}
+
+header a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 0.78rem;
+    letter-spacing: 0.18rem;
+    display: flex;
+    transition: all 0.2s ease;
+}
+
+.actif {
+    font-weight: bold;
+}
+
+header a:not(.actif):hover,
+.actif {
+    color: #0073ad;
+    transition: all 0.2s ease;
+}
+
+.separateur-vertical {
+    width: 1px;
+    height: 2vh;
+    background-color: rgb(112, 144, 192);
+}
+
+.iconinfo,
+.cal {
+    height: 2.5vh;
+}
+
+.cal {
+    margin-right: 0.8em;
+}
+
+.resalien {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+}
+
+/* ------Footer------ */
+
+footer {
+    height: 20vh;
+    background-color: #003753;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+}
+
+/* ------Entete------ */
+
+
+.entete {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/entete2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition 1s 0.8s ease-out forwards;
+}
+
+.entete h1 {
+    font-size: 5.5rem;
+    color: white;
+}
+
+/* ------Page produit------ */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    background-color: #ffffff;
+    margin: auto;
+    width: 80%;
+    margin: 2em auto 2em auto;
+}
+
+.retour {
+    border-bottom: black 1px solid;
+    border-left: black 1px solid;
+    width: 2em;
+    height: 2em;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: apparition-retour 1s 0.2s ease-out forwards;
+}
+
+.grandeimg {
+    height: 80vh;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition 1s 0.2s ease-out forwards;
+}
+
+.info-chb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    
+}
+
+.info-txt {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.8s 0.5s ease-out forwards;
+}
+
+.info-txt h1, .info-txt h2 {
+    font-size: 3rem;
+}
+
+.caracteristiques {
+    display: flex;
+    justify-content: space-between;
+}
+
+.caracteristiques span {
+    font-weight: 400;
+    color: rgb(112, 144, 192);
+}
+
+.info-txt>p span {
+    font-size: 1.8rem;
+    font-family: 'Forum';
+    margin-bottom: 0.5em;
+}
+
+.equip {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.equip div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: #005C8A;
+    font-family: 'Lato', sans-serif;
+}
+
+.equip img {
+    width: 30%;
+    margin-bottom: 0.5em;
+}
+
+.contient-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfb;
+    border: #efefef 3px solid;
+    width: 100%;
+    padding: 2em;
+    opacity: 0;
+    
+    animation: apparition 0.8s 0.5s ease-out forwards;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.form-part {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.form-chps {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    width: 75%;
+}
+
+.form-resa {
+    justify-content: center;
+    gap: 1em;
+    width: 20%;
+}
+
+.form-resa p {
+    font-weight: 400;
+}
+
+.titreform {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titreform h1 {
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    color: black;
+    white-space: nowrap;
+}
+
+.formbox,
+.formbox2{
+    width: 100%;
+    font-size: 0.75rem;
+}
+
+.formbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 0.5em;
+}
+
+.formbox2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.littlebox {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 0.5em;
+}
+
+label {
+    letter-spacing: 0.08rem;
+}
+
+.submit {
+    font-size: 1.1em;
+    height: 3em;
+    padding: 0.5em;
+    background-color: rgb(112, 144, 192);
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit:hover {
+    background-color: #e7d0a2;
+    transition: all 0.3s;
+}
+
+input,
+select {
+    width: 100%;
+    height: 5vh;
+    border: 0;
+    border-bottom: 1px solid #e7d0a2;
+    padding-left: 1em;
+    size: 1rem;
+    font-family: 'Tahoma', sans-serif;
+    letter-spacing: 0.1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+input {
+    text-align: center;
+}
+
+.hamburger, .navresp {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    nav,
+    .resalien,
+    .separateur2{
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        min-height: 17vh;
+    }
+
+    .menu {
+        cursor: pointer;
+        display: block;
+        width: 3%;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .form-resa {
+        width: 100%;
+    }
+
+    .form-part {
+        width: 100%;
+    }
+
+    .form-chps {
+        gap: 2em;
+        width: 100%;
+    }
+
+    .info-chb {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .grandeimg {
+        height: 100%;
+    }
+    .nav-item {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.18rem;
+        transition: all 0.2s ease;
+        margin-left: 10%;
+    }
+
+   .nav-item:not(.actif):hover,
+    .actif {
+    color: #0073ad;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+    .hamburger {
+        display: block;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .navresp {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        position: sticky;
+        width: 100vw;
+        height: 100%;
+        position: fixed;
+        transform: translateX(-200%);
+        transition: transform 0.7s ease-out;
+        z-index: 99;
+        background: white;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    .show-nav {
+        transform: translateX(0);
+    }
+
+
+}
+
+@media screen and (min-width: 1280px) {
+    .nav {
+        display: flex;
+    }
+}
+
+/* -------apparition------- */
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes apparition-retour {
+    100%{
+        opacity: 1;
+    }
+}
